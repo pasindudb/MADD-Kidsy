@@ -28,7 +28,7 @@ public class Deliver extends AppCompatActivity {
     private FirebaseDatabase database;
     private DatabaseReference payref;
     private Button btn;
-    EditText ddelid,dorderid,ddelfirst,ddellast,ddelemail,ddeladdress,ddelzip,ddelqty,ddeldate;
+    EditText ddelid,dorderid,ddelfirst,ddeladdress,ddelqty,ddeldate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +43,7 @@ public class Deliver extends AppCompatActivity {
         ddelid=findViewById(R.id.delid);
         dorderid=findViewById(R.id.orderid);
         ddelfirst=findViewById(R.id.delfirst);
-        ddellast=findViewById(R.id.dellast);
         ddeladdress=findViewById(R.id.deladdress);
-        ddelzip=findViewById(R.id.delzip);
-        ddelemail=findViewById(R.id.delemail);
         ddelqty=findViewById(R.id.delqty);
         ddeldate=findViewById(R.id.deldate);
 
@@ -66,10 +63,7 @@ public class Deliver extends AppCompatActivity {
                 String delid = ddelid.getText().toString();
                 String orderid = dorderid.getText().toString() ;
                 String delfirst = ddelfirst.getText().toString();
-                String dellast = ddellast.getText().toString();
                 String deladdress = ddeladdress.getText().toString();
-                String delzip = ddelzip.getText().toString();
-                String delemail = ddelemail.getText().toString();
                 String delqty = ddelqty.getText().toString();
                 String deldate = ddeldate.getText().toString();
 
@@ -85,22 +79,13 @@ public class Deliver extends AppCompatActivity {
                     ddelfirst.setError("First Name can not be empty");
                     return;
                 }
-                if(TextUtils.isEmpty(dellast)){
-                    ddellast.setError("Last Name can not be empty");
-                    return;
-                }
+
                 if(TextUtils.isEmpty(deladdress)){
                     ddeladdress.setError("Please Enter the Postal Address");
                     return;
                 }
-                if(TextUtils.isEmpty(delzip)){
-                    ddelzip.setError("Please Enter postal ZIP code");
-                    return;
-                }
-                if(TextUtils.isEmpty(delemail)){
-                    ddelemail.setError("Please enter customer Email");
-                    return;
-                }
+
+
                 if(TextUtils.isEmpty(delqty)){
                     ddelqty.setError("Please enter nunmber of books");
                     return;
@@ -113,7 +98,7 @@ public class Deliver extends AppCompatActivity {
                 long mDateTime = 9999999999999L - System.currentTimeMillis();
                 String mOrderTime = String.valueOf(mDateTime);
 
-                DeliverData deliverData = new DeliverData(delid,orderid,delfirst,dellast,deladdress,delzip,delemail,delqty,deldate);
+                DeliverData deliverData = new DeliverData(delid,orderid,delfirst,deladdress,delqty,deldate);
                 payref.child(mOrderTime).setValue(deliverData).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {

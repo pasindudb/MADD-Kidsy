@@ -27,7 +27,7 @@ public class Paymentinfo extends AppCompatActivity {
         private FirebaseDatabase database;
         private DatabaseReference payref;
 
-    EditText epayid,epayfirstname,epaylastname,epaynic,epayemail,epayphone,epayaddress,epayzipcode,epaycardnumber,epaycardowner,epaycardcode,epaycardexpiredate,epaybookname,epayqty,epaytotalprice,epaydate;
+    EditText epayid,epayfirstname,epayemail,epayaddress,epaycardnumber,epaycardowner,epaycardexpiredate,epaybookname,epayqty,epaytotalprice,epaydate;
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle dtoggle;
@@ -46,15 +46,10 @@ public class Paymentinfo extends AppCompatActivity {
 
         epayid = findViewById(R.id.payid);
         epayfirstname = findViewById(R.id.payfirstname);
-        epaylastname = findViewById(R.id.paylastname);
-        epaynic = findViewById(R.id.paynic);
         epayemail = findViewById(R.id.payemail);
-        epayphone =findViewById(R.id.payphone);
         epayaddress = findViewById(R.id.payaddress);
-        epayzipcode =findViewById(R.id.zipcode);
         epaycardnumber = findViewById(R.id.paycardnumber);
         epaycardowner = findViewById(R.id.paycardowner);
-        epaycardcode = findViewById(R.id.paycardcode);
         epaycardexpiredate = findViewById(R.id.paycardexpiredate);
         epaybookname = findViewById(R.id.paybookname);
         epayqty = findViewById(R.id.payqty);
@@ -88,15 +83,10 @@ public class Paymentinfo extends AppCompatActivity {
 
                 String payid = epayid.getText().toString();
                 String payfirstname = epayfirstname.getText().toString();
-                String paylastname = epaylastname.getText().toString();
-                String paynic = epaynic.getText().toString() ;
                 String payemail = epayemail.getText().toString();
-                String payphone = epayphone.getText().toString();
                 String payaddress = epayaddress.getText().toString();
-                String payzipcode = epayzipcode.getText().toString();
                 String paycardnumber = epaycardnumber.getText().toString();
                 String paycardowner = epaycardowner.getText().toString();
-                String paycardcode = epaycardcode.getText().toString();
                 String paycardexpiredate = epaycardexpiredate.getText().toString();
                 String paybookname = epaybookname.getText().toString();
                 String payqty = epayqty.getText().toString();
@@ -107,30 +97,17 @@ public class Paymentinfo extends AppCompatActivity {
                     epayfirstname.setError("First Name can not be empty");
                     return;
                 }
-                if(TextUtils.isEmpty(paylastname)){
-                    epaylastname.setError("Last Name can not be empty");
-                    return;
-                }
-                if(TextUtils.isEmpty(paynic)){
-                    epaynic.setError("NIC can not be empty");
-                    return;
-                }
+
                 if(TextUtils.isEmpty(payemail)){
                     epayemail.setError("Please enter the Email");
                     return;
                 }
-                if(TextUtils.isEmpty(payphone)){
-                    epayphone.setError("Please enter the Phone number");
-                    return;
-                }
+
                 if(TextUtils.isEmpty(payaddress)){
                     epayaddress.setError("Address Field can not be empty");
                     return;
                 }
-                if(TextUtils.isEmpty(payzipcode)){
-                    epayzipcode.setError("Please enter the zip code");
-                    return;
-                }
+
                 if(TextUtils.isEmpty(paycardnumber)){
                     epaycardnumber.setError("You must enter the Credit Card Number");
                     return;
@@ -139,10 +116,7 @@ public class Paymentinfo extends AppCompatActivity {
                     epaycardowner.setError("Please enter the card owners name");
                     return;
                 }
-                if(TextUtils.isEmpty(paycardcode)){
-                    epaycardcode.setError("Please enter the security code");
-                    return;
-                }
+
                 if(TextUtils.isEmpty(paycardexpiredate)){
                     epaycardexpiredate.setError("Please enter Credit card expire date");
                     return;
@@ -168,7 +142,7 @@ public class Paymentinfo extends AppCompatActivity {
                 long mDateTime = 9999999999999L - System.currentTimeMillis();
                 String mOrderTime = String.valueOf(mDateTime);
 
-                PaymentData paymentData = new PaymentData(payid,payfirstname,paylastname,paynic,payemail,payphone,payaddress,payzipcode,paycardnumber,paycardowner,paycardcode,paycardexpiredate,paybookname,payqty,paytotalprice,paydate);
+                PaymentData paymentData = new PaymentData(payid,payfirstname,payemail,payaddress,paycardnumber,paycardowner,paycardexpiredate,paybookname,payqty,paytotalprice,paydate);
                 payref.child(mOrderTime).setValue(paymentData).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
@@ -186,7 +160,7 @@ public class Paymentinfo extends AppCompatActivity {
     }
 
     public void openMyorders(){
-            Intent intent = new Intent(this,MyOrders.class);
+            Intent intent = new Intent(this,Myorders.class);
             startActivity(intent);
         }
 

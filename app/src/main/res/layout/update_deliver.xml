@@ -36,19 +36,6 @@
         android:autofillHints="@string/payfirstname"
         />
     <EditText
-        android:id="@+id/edlastname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:inputType="textPersonName"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp"
-        android:textSize="12sp"
-        android:hint="@string/paylastname"
-        android:autofillHints="@string/paylastname"
-        />
-    <EditText
         android:id="@+id/edaddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,32 +47,6 @@
         android:layout_marginTop="0dp"
         android:hint="@string/payaddress"
         android:autofillHints="@string/payaddress"
-        />
-    <EditText
-        android:id="@+id/edzipcode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:layout_marginBottom="0dp"
-        android:textSize="12sp"
-        android:layout_marginTop="0dp"
-        android:hint="@string/payzipcode"
-        android:autofillHints="@string/payzipcode"
-        />
-    <EditText
-        android:id="@+id/edemail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:inputType="textEmailAddress"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="0dp"
-        android:textSize="12sp"
-        android:layout_marginTop="0dp"
-        android:hint="@string/payemail"
-        android:autofillHints="@string/payemail"
         />
 
     <EditText
@@ -115,18 +76,10 @@
         android:autofillHints="@string/deldate"
         />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btneditdel"
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
@@ -140,10 +93,10 @@
             />
         <Button
             android:id="@+id/btndltdel"
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="0dp"
             android:layout_marginRight="0dp"
             android:text="@string/delete"
@@ -153,5 +106,5 @@
             android:textAlignment="center"
             />
 
-    </LinearLayout>
+
 </LinearLayout>

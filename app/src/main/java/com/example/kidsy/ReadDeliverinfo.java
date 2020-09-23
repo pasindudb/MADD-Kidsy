@@ -78,11 +78,11 @@ public class ReadDeliverinfo extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 DeliverData deliverData=deliverlist.get(i);
-                showUpdateDialog(deliverData.getDelid(),deliverData.getOrderid(),deliverData.getDelfirst(),deliverData.getDellast(),deliverData.getDeladdress(),deliverData.getDelzip(),deliverData.getDelemail(),deliverData.getDelqty(),deliverData.getDeldate());
+                showUpdateDialog(deliverData.getDelid(),deliverData.getOrderid(),deliverData.getDelfirst(),deliverData.getDeladdress(),deliverData.getDelqty(),deliverData.getDeldate());
             }
         });
     }
-    public void showUpdateDialog(final String delid,String orderid,String delfirst,String dellast, String deladdress,String delzip, String delemail, String delqty,String deldate) {
+    public void showUpdateDialog(final String delid,String orderid,String delfirst,String deladdress, String delqty,String deldate) {
         AlertDialog.Builder dialogBuilder= new AlertDialog.Builder(this);
         LayoutInflater inflater=getLayoutInflater();
         final View dialogView= inflater.inflate(R.layout.update_deliver,null);
@@ -90,10 +90,7 @@ public class ReadDeliverinfo extends AppCompatActivity {
 
         final EditText eorderid = (EditText) dialogView.findViewById(R.id.edorderid);
         final EditText efirst = (EditText) dialogView.findViewById(R.id.edfirstname);
-        final EditText elast= (EditText) dialogView.findViewById(R.id.edlastname);
         final EditText eaddress = (EditText) dialogView.findViewById(R.id.edaddress);
-        final EditText ezipcode = (EditText) dialogView.findViewById(R.id.edzipcode);
-        final EditText eemail= (EditText) dialogView.findViewById(R.id.edemail);
         final EditText edate = (EditText) dialogView.findViewById(R.id.eddate);
         final EditText eqty = (EditText) dialogView.findViewById(R.id.edqty);
         final Button ebtn = (Button) dialogView.findViewById(R.id.btneditdel);
@@ -116,10 +113,7 @@ public class ReadDeliverinfo extends AppCompatActivity {
             public void onClick(View view) {
                 String delorderid=eorderid.getText().toString().trim();
                 String delfirst=efirst.getText().toString().trim();
-                String dellast =elast.getText().toString().trim();
                 String deladdress =eaddress.getText().toString().trim();
-                String delzip =ezipcode.getText().toString().trim();
-                String delemail =eemail.getText().toString().trim();
                 String delqty =eqty.getText().toString().trim();
                 String deldate =edate.getText().toString().trim();
 
@@ -132,22 +126,13 @@ public class ReadDeliverinfo extends AppCompatActivity {
                 efirst.setError("First Name can not be empty");
                 return;
             }
-                if(TextUtils.isEmpty(dellast)){
-                elast.setError("Last Name can not be empty");
-                return;
-            }
+
                 if(TextUtils.isEmpty(deladdress)){
                 eaddress.setError("Please Enter the Postal Address");
                 return;
             }
-                if(TextUtils.isEmpty(delzip)){
-                ezipcode.setError("Please Enter postal ZIP code");
-                return;
-            }
-                if(TextUtils.isEmpty(delemail)){
-                eemail.setError("Please enter customer Email");
-                return;
-            }
+
+
                 if(TextUtils.isEmpty(delqty)){
                     eqty.setError("Please enter Number of books");
                     return;
@@ -156,7 +141,7 @@ public class ReadDeliverinfo extends AppCompatActivity {
                 edate.setError("Please enter order delivered date");
                 return;
             }
-            updateDeliver(delid,delorderid,delfirst,dellast,deladdress,delzip,delemail,delqty,deldate);
+            updateDeliver(delid,delorderid,delfirst,deladdress,delqty,deldate);
                 alertDialog.dismiss();
 
         }
@@ -171,9 +156,9 @@ public class ReadDeliverinfo extends AppCompatActivity {
         Toast.makeText(this,"Deliver Data Deleted",Toast.LENGTH_LONG).show();
     }
 
-    private boolean updateDeliver(String delid, String orderid, String delfirst, String dellast,String deladdress, String delzip,String delemail,String delqty, String deldate){
+    private boolean updateDeliver(String delid, String orderid, String delfirst,String deladdress,String delqty, String deldate){
             DatabaseReference databaseReference=FirebaseDatabase.getInstance().getReference("DeliverData").child(delid);
-            DeliverData deliverData= new DeliverData(delid,orderid,delfirst,dellast,deladdress,delzip,delemail,delqty,deldate);
+            DeliverData deliverData= new DeliverData(delid,orderid,delfirst,deladdress,delqty,deldate);
             databaseReference.setValue(deliverData);
             Toast.makeText(this,"Deliver Data Updated Successfully",Toast.LENGTH_LONG).show();
             return true;

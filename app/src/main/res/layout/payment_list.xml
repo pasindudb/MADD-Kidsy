@@ -29,34 +29,7 @@
         android:layout_marginTop="0dp"
         />
     <TextView
-        android:id="@+id/rplastname"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp"
-        />
-    <TextView
-        android:id="@+id/rpnic"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp"
-        />
-    <TextView
         android:id="@+id/rpemail"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp"
-        />
-    <TextView
-        android:id="@+id/rpphone"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_marginEnd="5dp"
@@ -93,15 +66,6 @@
         />
     <TextView
         android:id="@+id/rpcardowner"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp"
-        />
-    <TextView
-        android:id="@+id/rpcardcode"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_marginEnd="5dp"

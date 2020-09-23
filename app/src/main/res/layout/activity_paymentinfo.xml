@@ -82,32 +82,6 @@
             android:autofillHints="@string/payfirstname"
             />
         <EditText
-            android:id="@+id/paylastname"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:gravity="start"
-            android:inputType="textPersonName"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="0dp"
-            android:hint="@string/paylastname"
-            android:autofillHints="@string/paylastname"
-            />
-        <EditText
-            android:id="@+id/paynic"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:gravity="start"
-            android:inputType="text"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="0dp"
-            android:hint="@string/paynic"
-            android:autofillHints="@string/paynic"
-            />
-        <EditText
             android:id="@+id/payemail"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -120,20 +94,6 @@
             android:hint="@string/payemail"
             android:autofillHints="@string/payemail"
            />
-
-        <EditText
-            android:id="@+id/payphone"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:gravity="start"
-            android:inputType="phone"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="0dp"
-            android:hint="@string/payphone"
-            android:autofillHints="@string/payphone"
-            />
         <EditText
             android:id="@+id/payaddress"
             android:layout_width="match_parent"
@@ -146,19 +106,6 @@
             android:layout_marginBottom="0dp"
             android:hint="@string/payaddress"
             android:autofillHints="@string/payaddress"
-            />
-        <EditText
-            android:id="@+id/zipcode"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:gravity="start"
-            android:inputType="number"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="0dp"
-            android:hint="@string/payzipcode"
-            android:autofillHints="@string/payzipcode"
             />
         <EditText
             android:id="@+id/paycardnumber"
@@ -185,19 +132,6 @@
             android:layout_marginBottom="0dp"
             android:hint="@string/paycardowner"
             android:autofillHints="@string/paycardowner"
-            />
-        <EditText
-            android:id="@+id/paycardcode"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:gravity="start"
-            android:inputType="number"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="0dp"
-            android:hint="@string/paycardcode"
-            android:autofillHints="@string/paycardcode"
             />
         <EditText
             android:id="@+id/paycardexpiredate"

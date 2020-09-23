@@ -4,15 +4,10 @@ public class PaymentData {
 
     String payid;
     String payfirstname;
-    String paylastname;
-    String paynic;
     String payemail;
-    String payphone;
     String payaddress;
-    String payzipcode;
     String paycardnumber;
     String paycardowner;
-    String paycardcode;
     String paycardexpiredate;
     String paybookname;
     String payqty;
@@ -22,18 +17,13 @@ public class PaymentData {
     public PaymentData() {
     }
 
-    public PaymentData(String payid, String payfirstname, String paylastname, String paynic, String payemail, String payphone, String payaddress, String payzipcode, String paycardnumber, String paycardowner, String paycardcode, String paycardexpiredate, String paybookname,String payqty, String paytotalprice, String paydate) {
+    public PaymentData(String payid, String payfirstname, String payemail,String payaddress,String paycardnumber, String paycardowner, String paycardexpiredate, String paybookname,String payqty, String paytotalprice, String paydate) {
         this.payid = payid;
         this.payfirstname = payfirstname;
-        this.paylastname = paylastname;
-        this.paynic = paynic;
         this.payemail = payemail;
-        this.payphone = payphone;
         this.payaddress = payaddress;
-        this.payzipcode = payzipcode;
         this.paycardnumber = paycardnumber;
         this.paycardowner = paycardowner;
-        this.paycardcode = paycardcode;
         this.paycardexpiredate = paycardexpiredate;
         this.paybookname = paybookname;
         this.payqty = payqty;
@@ -57,22 +47,6 @@ public class PaymentData {
         this.payfirstname = payfirstname;
     }
 
-    public String getPaylastname() {
-        return paylastname;
-    }
-
-    public void setPaylastname(String paylastname) {
-        this.paylastname = paylastname;
-    }
-
-    public String getPaynic() {
-        return paynic;
-    }
-
-    public void setPaynic(String paynic) {
-        this.paynic = paynic;
-    }
-
     public String getPayemail() {
         return payemail;
     }
@@ -81,28 +55,12 @@ public class PaymentData {
         this.payemail = payemail;
     }
 
-    public String getPayphone() {
-        return payphone;
-    }
-
-    public void setPayphone(String payphone) {
-        this.payphone = payphone;
-    }
-
     public String getPayaddress() {
         return payaddress;
     }
 
     public void setPayaddress(String payaddress) {
         this.payaddress = payaddress;
-    }
-
-    public String getPayzipcode() {
-        return payzipcode;
-    }
-
-    public void setPayzipcode(String payzipcode) {
-        this.payzipcode = payzipcode;
     }
 
     public String getPaycardnumber() {
@@ -119,14 +77,6 @@ public class PaymentData {
 
     public void setPaycardowner(String paycardowner) {
         this.paycardowner = paycardowner;
-    }
-
-    public String getPaycardcode() {
-        return paycardcode;
-    }
-
-    public void setPaycardcode(String paycardcode) {
-        this.paycardcode = paycardcode;
     }
 
     public String getPaycardexpiredate() {

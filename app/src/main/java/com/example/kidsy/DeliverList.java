@@ -32,10 +32,7 @@ public class DeliverList extends ArrayAdapter<DeliverData> {
         TextView did =(TextView) listViewItem.findViewById(R.id.rdid);
         TextView doid =(TextView) listViewItem.findViewById(R.id.roid);
         TextView dfirstname =(TextView) listViewItem.findViewById(R.id.rdfirstname);
-        TextView dlastname =(TextView) listViewItem.findViewById(R.id.rdlastname);
         TextView daddress =(TextView) listViewItem.findViewById(R.id.rdaddress);
-        TextView dzipcode =(TextView) listViewItem.findViewById(R.id.rdzipcode);
-        TextView demail =(TextView) listViewItem.findViewById(R.id.rdemail);
         TextView dqty =(TextView) listViewItem.findViewById(R.id.rdqty);
         TextView ddate =(TextView) listViewItem.findViewById(R.id.rddate);
 
@@ -44,10 +41,7 @@ public class DeliverList extends ArrayAdapter<DeliverData> {
         did.setText(deliverData.getDelid());
         doid.setText(deliverData.getOrderid());
         dfirstname.setText(deliverData.getDelfirst());
-        dlastname.setText(deliverData.getDellast());
         daddress.setText(deliverData.getDeladdress());
-        dzipcode.setText(deliverData.getDelzip());
-        demail.setText(deliverData.getDelemail());
         dqty.setText(deliverData.getDelqty());
         ddate.setText(deliverData.getDeldate());
 

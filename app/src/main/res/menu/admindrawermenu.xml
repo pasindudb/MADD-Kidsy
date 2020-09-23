@@ -10,10 +10,5 @@
     <item android:id="@+id/dashdelivers" android:title="@string/dashdelivers" android:icon="@drawable/ic_deliver" />
     <item android:id="@+id/dashlogout" android:title="@string/logout" android:icon="@drawable/ic_logout" />
     </group>
-    <item android:title="@string/contact_us" android:icon="@drawable/ic_contact">
-        <menu>
-        <item android:id="@+id/kidsyphone" android:title="@string/kidsyp" android:icon="@drawable/ic_phone" />
-            <item android:id="@+id/kidsyemail" android:title="@string/kidsye" android:icon="@drawable/ic_email" />
-        </menu>
-    </item>
+
 </menu>

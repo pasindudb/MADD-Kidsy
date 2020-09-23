@@ -5,24 +5,18 @@ public class DeliverData {
     String delid;
     String orderid;
     String delfirst;
-    String dellast;
     String deladdress;
-    String delzip;
-    String delemail;
     String delqty;
     String deldate;
 
     public DeliverData() {
     }
 
-    public DeliverData(String delid, String orderid, String delfirst, String dellast, String deladdress, String delzip, String delemail,String delqty, String deldate) {
+    public DeliverData(String delid, String orderid, String delfirst, String deladdress,String delqty, String deldate) {
         this.delid = delid;
         this.orderid = orderid;
         this.delfirst = delfirst;
-        this.dellast = dellast;
         this.deladdress = deladdress;
-        this.delzip = delzip;
-        this.delemail = delemail;
         this.delqty=delqty;
         this.deldate = deldate;
     }
@@ -51,13 +45,7 @@ public class DeliverData {
         this.delfirst = delfirst;
     }
 
-    public String getDellast() {
-        return dellast;
-    }
 
-    public void setDellast(String dellast) {
-        this.dellast = dellast;
-    }
 
     public String getDeladdress() {
         return deladdress;
@@ -67,21 +55,7 @@ public class DeliverData {
         this.deladdress = deladdress;
     }
 
-    public String getDelzip() {
-        return delzip;
-    }
 
-    public void setDelzip(String delzip) {
-        this.delzip = delzip;
-    }
-
-    public String getDelemail() {
-        return delemail;
-    }
-
-    public void setDelemail(String delemail) {
-        this.delemail = delemail;
-    }
     public String getDelqty() {
         return delqty;
     }
@@ -97,4 +71,6 @@ public class DeliverData {
     public void setDeldate(String deldate) {
         this.deldate = deldate;
     }
+
+
 }

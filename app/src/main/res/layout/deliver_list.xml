@@ -39,34 +39,7 @@
         android:layout_marginTop="0dp"
         />
     <TextView
-        android:id="@+id/rdlastname"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp"
-        />
-    <TextView
         android:id="@+id/rdaddress"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp"
-        />
-    <TextView
-        android:id="@+id/rdzipcode"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp"
-        />
-    <TextView
-        android:id="@+id/rdemail"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_marginEnd="5dp"

@@ -23,32 +23,6 @@
         android:autofillHints="@string/payfirstname"
         />
     <EditText
-        android:id="@+id/eplastname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:inputType="textPersonName"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp"
-        android:textSize="10sp"
-        android:hint="@string/paylastname"
-        android:autofillHints="@string/paylastname"
-        />
-    <EditText
-        android:id="@+id/epnic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:inputType="textPersonName"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp"
-        android:hint="@string/paynic"
-        android:textSize="10sp"
-        android:autofillHints="@string/paynic"
-        />
-    <EditText
         android:id="@+id/epemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,19 +36,6 @@
         android:autofillHints="@string/payemail"
         />
     <EditText
-        android:id="@+id/epphone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:inputType="phone"
-        android:layout_marginBottom="0dp"
-        android:textSize="10sp"
-        android:layout_marginTop="0dp"
-        android:hint="@string/payphone"
-        android:autofillHints="@string/payphone"
-        />
-    <EditText
         android:id="@+id/epaddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -86,19 +47,6 @@
         android:layout_marginTop="0dp"
         android:hint="@string/payaddress"
         android:autofillHints="@string/payaddress"
-        />
-    <EditText
-        android:id="@+id/epzipcode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:inputType="number"
-        android:layout_marginBottom="0dp"
-        android:textSize="10sp"
-        android:layout_marginTop="0dp"
-        android:hint="@string/payzipcode"
-        android:autofillHints="@string/payzipcode"
         />
     <EditText
         android:id="@+id/epcardnumber"
@@ -125,19 +73,6 @@
         android:layout_marginTop="0dp"
         android:hint="@string/paycardowner"
         android:autofillHints="@string/paycardowner"
-        />
-    <EditText
-        android:id="@+id/epcardcode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:textSize="10sp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp"
-        android:hint="@string/paycardcode"
-        android:autofillHints="@string/paycardcode"
         />
     <EditText
         android:id="@+id/epcardexpiredate"

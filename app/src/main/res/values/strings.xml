@@ -36,16 +36,11 @@
     <string name="paymentinfo">Payment Details</string>
     <string name="payid">Payment ID</string>
     <string name="payaddress">Shipping Address</string>
-    <string name="payfirstname">First name</string>
-    <string name="paylastname">Last name</string>
+    <string name="payfirstname">Cutomer Name</string>
     <string name="payemail">Email</string>
-    <string name="payzipcode">Zip Code</string>
-    <string name="payphone">Phone number</string>
-    <string name="paynic">NIC</string>
     <string name="payconfirm">Confirm above informations</string>
     <string name="paycardnumber">Credit Card Number</string>
     <string name="paycardowner">Card Owners Name</string>
-    <string name="paycardcode">Security Code</string>
     <string name="paycardexpiredate">Creit Card expire date</string>
     <string name="paybookname">Book Name</string>
     <string name="paybookqty">Number of books</string>
@@ -61,8 +56,7 @@
     <string name="deladdress">Deliver Address</string>
     <string name="delzip">Zip Code</string>
     <string name="delemail">Customer Email</string>
-    <string name="delfirst">Customer First Name</string>
-    <string name="dellast">Customer Last Name</string>
+    <string name="delfirst">Customer Name</string>
     <string name="deldate">Deliver Date</string>
     <string name="delivered">Complete Delivery</string>
     <string name="myorders">My Orders</string>

@@ -22,6 +22,7 @@ public class AdminHome extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle dtoggle;
     private Button btn;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
