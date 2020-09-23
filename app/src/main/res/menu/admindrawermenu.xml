@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+    <item android:id="@+id/dashboard" android:title="@string/dashboard" android:icon="@drawable/ic_dashboard" />
+    <item android:id="@+id/dashusers" android:title="@string/dashboard" android:icon="@drawable/ic_user"/>
+    <item android:id="@+id/dashbooks" android:title="@string/homebtnbooks" android:icon="@drawable/ic_book"/>
+    <item android:id="@+id/dashnewspapers" android:title="@string/homebtnnewspapers" android:icon="@drawable/ic_news"/>
+    <item android:id="@+id/dashentertainment" android:title="@string/homebtnentertainment" android:icon="@drawable/ic_music_player"/>
+    <item android:id="@+id/dashpayments" android:title="@string/dashpayments" android:icon="@drawable/ic_payment"/>
+    <item android:id="@+id/dashdelivers" android:title="@string/dashdelivers" android:icon="@drawable/ic_deliver" />
+    <item android:id="@+id/dashlogout" android:title="@string/logout" android:icon="@drawable/ic_logout" />
+    </group>
+    <item android:title="@string/contact_us" android:icon="@drawable/ic_contact">
+        <menu>
+        <item android:id="@+id/kidsyphone" android:title="@string/kidsyp" android:icon="@drawable/ic_phone" />
+            <item android:id="@+id/kidsyemail" android:title="@string/kidsye" android:icon="@drawable/ic_email" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buynowlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Buybook">
+
+    <com.google.android.material.navigation.NavigationView
+        app:headerLayout="@layout/header"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:itemTextColor="@color/dark"
+        app:itemIconTint="@color/dark"
+        app:menu="@menu/drawermenu"
+        android:layout_gravity="start"
+        >
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+    <ScrollView
+        android:id="@+id/scrollbuybook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:id="@+id/buylay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark"
+            android:textStyle="bold"
+            android:text="@string/buybook"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="sans-serif-black"
+            >
+
+        </TextView>
+
+
+            <ImageView
+                android:id="@+id/buynowimg"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                >
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/bookname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="@color/dark"
+                android:textSize="20sp"
+                android:gravity="start"
+                android:text="Book name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp">
+             </TextView>
+            <TextView
+                android:id="@+id/bookprice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="@color/dark"
+                android:textSize="20sp"
+                android:gravity="start"
+                android:text="Book Price"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp">
+            </TextView>
+            <TextView
+                android:id="@+id/bookship"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="@color/dark"
+                android:textSize="20sp"
+                android:gravity="start"
+                android:text="Shipping"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp">
+            </TextView>
+            <EditText
+                android:id="@+id/buyquantityedit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="start"
+                android:inputType="number"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:hint="@string/buyquantity"
+               />
+            <TextView
+                android:id="@+id/bookfinal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="@color/dark"
+                android:textSize="20sp"
+                android:gravity="start"
+                android:text="Total Price"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp">
+            </TextView>
+
+            <Button
+                android:id="@+id/btnbuynow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/buynow"
+                android:background="@drawable/custom_button"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                />
+            <Button
+                android:id="@+id/btnbuycancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/buycancel"
+                android:background="@drawable/custom_button"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

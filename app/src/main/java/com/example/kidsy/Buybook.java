@@ -5,16 +5,14 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-public class MyOrders extends AppCompatActivity {
-
+public class Buybook extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle dtoggle;
@@ -25,25 +23,36 @@ public class MyOrders extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_orders);
+        setContentView(R.layout.activity_buybook);
 
-        drawerLayout = findViewById(R.id.myorderslay);
+        drawerLayout = findViewById(R.id.buynowlay);
         dtoggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.hopen, R.string.hclose);
         dtoggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
-
-        myRef.setValue("Hello, World!");
-
+   /*     btn = findViewById(R.id.btnbuynow);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openPaymentinfo();
+            }
+        });
+*/
     }
+
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(dtoggle.onOptionsItemSelected(item))
-        {
+        if (dtoggle.onOptionsItemSelected(item)) {
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
+ /*   public void openPaymentinfo(){
+        Intent intent = new Intent(this,Paymentinfo.class);
+        startActivity(intent);
+    }
+}
+
+  */
 }

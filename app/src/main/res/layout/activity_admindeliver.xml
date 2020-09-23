@@ -2,7 +2,7 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/homelayout1"
+    android:id="@+id/admindeliverlay"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.kidsy.MainActivity">
@@ -36,7 +36,7 @@
             android:layout_marginRight="0dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
-            
+
 
 
             <LinearLayout
@@ -48,7 +48,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
-                android:background="@drawable/hbooks"
+                android:background="@drawable/ddeliver"
                 android:orientation="vertical">
 
 
@@ -65,7 +65,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/homebtnbooks"
+                    android:id="@+id/homebtndeliver"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -74,7 +74,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="0dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/homebtnbooks"
+                    android:text="@string/delivermanage"
                     android:background="@drawable/custom_button"
                     android:textColor="@color/white"
                     android:textSize="15sp"
@@ -105,7 +105,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
-                android:background="@drawable/hnews"
+                android:background="@drawable/dread"
                 android:orientation="vertical">
 
 
@@ -121,7 +121,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/homebtnnewspapers"
+                    android:id="@+id/homebtnread"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -130,7 +130,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="0dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/homebtnnewspapers"
+                    android:text="@string/readmanage"
                     android:background="@drawable/custom_button"
                     android:textColor="@color/white"
                     android:textSize="15sp"
@@ -151,125 +151,6 @@
                 android:orientation="horizontal">
 
             </LinearLayout>
-
-            <LinearLayout
-
-                android:id="@+id/homelayout9"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="0dp"
-                android:background="@drawable/henters"
-                android:orientation="vertical">
-
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/homelayout10"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginRight="0dp"
-                android:layout_marginBottom="0dp"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/homebtnentertainment"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="0dp"
-                    android:fontFamily="sans-serif-black"
-                    android:text="@string/homebtnentertainment"
-                    android:background="@drawable/custom_button"
-                    android:textColor="@color/white"
-                    android:textSize="15sp"
-                    android:textStyle="bold">
-
-
-                </Button>
-
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/homelayout11"
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginRight="0dp"
-                android:layout_marginBottom="0dp"
-                android:orientation="horizontal">
-
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:id="@+id/homelayout12"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="0dp"
-                android:background="@drawable/horders"
-                android:orientation="vertical"
-                >
-
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/homelayout13"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginRight="0dp"
-                android:layout_marginBottom="0dp"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/homebtnorders"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="0dp"
-                    android:fontFamily="sans-serif-black"
-                    android:text="@string/homebtnorders"
-                    android:background="@drawable/custom_button"
-                    android:textColor="@color/white"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    />
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/homelayout14"
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginRight="0dp"
-                android:layout_marginBottom="0dp"
-                android:orientation="horizontal">
-
-            </LinearLayout>
-
-
-
         </LinearLayout>
-
     </ScrollView>
-
 </androidx.drawerlayout.widget.DrawerLayout>

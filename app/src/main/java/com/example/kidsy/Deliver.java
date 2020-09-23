@@ -1,64 +1,148 @@
 package com.example.kidsy;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
+import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Deliver#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class Deliver extends Fragment {
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+public class Deliver extends AppCompatActivity {
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+   private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggle dtoggle;
 
-    public Deliver() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Deliver.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Deliver newInstance(String param1, String param2) {
-        Deliver fragment = new Deliver();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    private FirebaseDatabase database;
+    private DatabaseReference payref;
+    private Button btn;
+    EditText ddelid,dorderid,ddelfirst,ddellast,ddelemail,ddeladdress,ddelzip,ddelqty,ddeldate;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        setContentView(R.layout.activity_deliver);
+
+        drawerLayout = findViewById(R.id.deliverlay);
+        dtoggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.hopen, R.string.hclose);
+        dtoggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        ddelid=findViewById(R.id.delid);
+        dorderid=findViewById(R.id.orderid);
+        ddelfirst=findViewById(R.id.delfirst);
+        ddellast=findViewById(R.id.dellast);
+        ddeladdress=findViewById(R.id.deladdress);
+        ddelzip=findViewById(R.id.delzip);
+        ddelemail=findViewById(R.id.delemail);
+        ddelqty=findViewById(R.id.delqty);
+        ddeldate=findViewById(R.id.deldate);
+
+
+        btn = findViewById(R.id.btndeliver);
+        addDeliver();
+
+    }
+
+    private void addDeliver() {
+        database = FirebaseDatabase.getInstance();
+        payref = database.getReference("DeliverData");
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String delid = ddelid.getText().toString();
+                String orderid = dorderid.getText().toString() ;
+                String delfirst = ddelfirst.getText().toString();
+                String dellast = ddellast.getText().toString();
+                String deladdress = ddeladdress.getText().toString();
+                String delzip = ddelzip.getText().toString();
+                String delemail = ddelemail.getText().toString();
+                String delqty = ddelqty.getText().toString();
+                String deldate = ddeldate.getText().toString();
+
+                if(TextUtils.isEmpty(delid)){
+                    ddelid.setError("Please Enter the Deliver ID");
+                    return;
+                }
+                if(TextUtils.isEmpty(orderid)){
+                    dorderid.setError("Please Enter the Order ID");
+                    return;
+                }
+                if(TextUtils.isEmpty(delfirst)){
+                    ddelfirst.setError("First Name can not be empty");
+                    return;
+                }
+                if(TextUtils.isEmpty(dellast)){
+                    ddellast.setError("Last Name can not be empty");
+                    return;
+                }
+                if(TextUtils.isEmpty(deladdress)){
+                    ddeladdress.setError("Please Enter the Postal Address");
+                    return;
+                }
+                if(TextUtils.isEmpty(delzip)){
+                    ddelzip.setError("Please Enter postal ZIP code");
+                    return;
+                }
+                if(TextUtils.isEmpty(delemail)){
+                    ddelemail.setError("Please enter customer Email");
+                    return;
+                }
+                if(TextUtils.isEmpty(delqty)){
+                    ddelqty.setError("Please enter nunmber of books");
+                    return;
+                }
+                if(TextUtils.isEmpty(deldate)){
+                    ddeldate.setError("Please enter order delivered date");
+                    return;
+                }
+
+                long mDateTime = 9999999999999L - System.currentTimeMillis();
+                String mOrderTime = String.valueOf(mDateTime);
+
+                DeliverData deliverData = new DeliverData(delid,orderid,delfirst,dellast,deladdress,delzip,delemail,delqty,deldate);
+                payref.child(mOrderTime).setValue(deliverData).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(getApplicationContext(),"Order Delivered Successfully",Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getApplicationContext(),"Cannot Complete the Order. Try again Later.",Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+
+
+        });
+    }
+
+
+    public void openDeliver(){
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_deliver, container, false);
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(dtoggle.onOptionsItemSelected(item))
+        {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
